@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "opencode",
+  "share": "manual",
+  "autoupdate": true,
+  "mcp": {
+    "Ref": {
+      "type": "remote",
+      "url": "https://api.ref.tools/mcp",
+      "enabled": true,
+      "headers": {
+        "x-ref-api-key": "{env:REF_API_KEY}"
+      }
+    }
+  },
+  "agent": {
+    "code-writer": {
+      "mode": "subagent",
+      "description": "Write and test code changes",
+      "prompt": "You write and test code changes. Always use all configured MCP servers for documentation and context before you finalize a solution. Follow OpenAI prompt best practices: state your role and goals clearly, follow developer instructions before user requests, ask clarifying questions when requirements are ambiguous, include only relevant context, use structured Markdown with sections and bullet lists, provide concrete steps and examples when helpful, call tools explicitly for code and testing tasks, validate changes with tests when possible, and avoid unsupported assumptions."
+    }
+  }
+}

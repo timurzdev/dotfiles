@@ -1,0 +1,4 @@
+font-family = JetBrains Mono
+theme = Catppuccin Mocha
+macos-titlebar-style = hidden
+macos-titlebar-proxy-icon = hidden
