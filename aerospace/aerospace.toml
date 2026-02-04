@@ -100,7 +100,10 @@ exec-on-workspace-change = ['/bin/bash', '-c',
     enter = 'mode main'
     esc = 'mode main'
 
-
 [gaps]
-outer.top = 40 
-
+outer.top = [
+    # На встроенном дисплее макбука gap не нужен (или минимальный)
+    { monitor."^built-in retina display$" = 0 },
+    # На всех остальных мониторах — gap равный высоте sketchybar
+    37,
+]
