@@ -89,6 +89,9 @@ exec-on-workspace-change = ['/bin/bash', '-c',
 
     alt-r = 'mode resize'
 
+	alt-enter = 'exec-and-forget open -a /Applications/Ghostty.app'
+
+
 [mode.resize.binding]
     h = 'resize width -50'
     j = 'resize height +50'
@@ -97,4 +100,7 @@ exec-on-workspace-change = ['/bin/bash', '-c',
     enter = 'mode main'
     esc = 'mode main'
 
+
+[gaps]
+outer.top = 40 
 
