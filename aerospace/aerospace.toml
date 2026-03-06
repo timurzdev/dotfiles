@@ -19,15 +19,6 @@ exec-on-workspace-change = ['/bin/bash', '-c',
 ]
 
 [mode.main.binding]
-    # See: https://nikitabobko.github.io/AeroSpace/goodies#open-a-new-window-with-applescript
-    alt-t = '''exec-and-forget osascript -e '
-	tell application "iTerm"
-		create window with default profile
-        activate
-    end tell
-	'
-    '''
-
     cmd-h = [] # Disable "hide application"
     cmd-alt-h = [] # Disable "hide others"
 
@@ -89,7 +80,7 @@ exec-on-workspace-change = ['/bin/bash', '-c',
 
     alt-r = 'mode resize'
 
-	alt-enter = 'exec-and-forget open -a /Applications/Ghostty.app'
+	alt-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
 
 
 [mode.resize.binding]
